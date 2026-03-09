@@ -18,11 +18,19 @@
 
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
 
+        
+
         :root { --brand: #ff7a00; --dark: #0f172a; }
+
+        
 
         * { scroll-behavior: smooth; font-family: 'Plus Jakarta Sans', sans-serif; }
 
+        
+
         body { background-color: #fdfdfd; color: var(--dark); }
+
+
 
         .hero-gradient {
 
@@ -31,6 +39,8 @@
                         radial-gradient(circle at 100% 100%, rgba(255, 122, 0, 0.05) 0%, transparent 50%);
 
         }
+
+
 
         .glass-card {
 
@@ -42,7 +52,15 @@
 
         }
 
-        .floating { animation: floating 3s ease-in-out infinite; }
+
+
+        .floating {
+
+            animation: floating 3s ease-in-out infinite;
+
+        }
+
+
 
         @keyframes floating {
 
@@ -54,6 +72,8 @@
 
         }
 
+
+
         .input-style {
 
             background: #f8fafc;
@@ -63,6 +83,8 @@
             transition: all 0.3s ease;
 
         }
+
+
 
         .input-style:focus {
 
@@ -76,7 +98,13 @@
 
         }
 
-        .btn-shadow { box-shadow: 0 10px 25px -5px rgba(255, 122, 0, 0.4); }
+
+
+        .btn-shadow {
+
+            box-shadow: 0 10px 25px -5px rgba(255, 122, 0, 0.4);
+
+        }
 
     </style>
 
@@ -88,7 +116,7 @@
 
     <nav class="flex justify-between items-center px-[10%] py-6 bg-white/70 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
 
-        <img src="image_02d399.png" alt="WoodAppleHub Logo" class="h-8 md:h-10">
+        <div class="text-2xl font-extrabold tracking-tighter text-orange-600">Fruit <span class="text-slate-400 text-lg">Hub</span></div>
 
         <div class="hidden md:block space-x-8 font-semibold text-sm text-slate-600">
 
@@ -134,7 +162,7 @@
 
                 <div class="absolute -inset-4 bg-orange-500/10 rounded-[3rem] blur-2xl"></div>
 
-                <img src="image_02c4bd.jpg" alt="Our Wood Apple Farm" class="relative w-80 md:w-[400px] rounded-[2.5rem] shadow-2xl floating border-8 border-white">
+                <img src="Pic.png" alt="Founder with Wood Apple" class="relative w-80 md:w-[400px] rounded-[2.5rem] shadow-2xl floating border-8 border-white">
 
             </div>
 
@@ -314,7 +342,7 @@
 
     <footer class="py-12 text-center text-slate-400 text-sm">
 
-        <p>© 2026 WoodAppleHub • Hand-harvested with ❤️ @ Ragul's Farm</p>
+        <p>© 2026 FruitHub • Hand-harvested with ❤️ @ Ragul's Farm</p>
 
         <p class="mt-2 text-xs">Serving all of Bangalore </p>
 
@@ -330,9 +358,15 @@
 
             let price = Math.round(qty * 40);
 
+            
+
             const display = document.getElementById("priceDisplay");
 
             display.innerText = "₹" + price;
+
+
+
+            // Simple animation on price change
 
             display.classList.add('animate__animated', 'animate__pulse');
 
@@ -342,6 +376,10 @@
 
     </script>
 
+
+
 </body>
+
+
 
 </html>
