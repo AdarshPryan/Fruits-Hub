@@ -8,56 +8,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
-        
         :root { --brand: #ff7a00; --dark: #0f172a; }
-        
         * { scroll-behavior: smooth; font-family: 'Plus Jakarta Sans', sans-serif; }
-        
         body { background-color: #fdfdfd; color: var(--dark); }
-
         .hero-gradient {
             background: radial-gradient(circle at 0% 0%, rgba(255, 122, 0, 0.05) 0%, transparent 50%),
                         radial-gradient(circle at 100% 100%, rgba(255, 122, 0, 0.05) 0%, transparent 50%);
         }
-
         .glass-card {
             background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(0,0,0,0.05);
         }
-
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-
+        .floating { animation: floating 3s ease-in-out infinite; }
         @keyframes floating {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-15px); }
             100% { transform: translateY(0px); }
         }
-
         .input-style {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
             transition: all 0.3s ease;
         }
-
         .input-style:focus {
             border-color: var(--brand);
             background: white;
             box-shadow: 0 0 0 4px rgba(255, 122, 0, 0.1);
             outline: none;
         }
-
-        .btn-shadow {
-            box-shadow: 0 10px 25px -5px rgba(255, 122, 0, 0.4);
-        }
+        .btn-shadow { box-shadow: 0 10px 25px -5px rgba(255, 122, 0, 0.4); }
     </style>
 </head>
 <body class="hero-gradient">
 
     <nav class="flex justify-between items-center px-[10%] py-6 bg-white/70 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
-        <div class="text-2xl font-extrabold tracking-tighter text-orange-600">Fruit <span class="text-slate-400 text-lg">Hub</span></div>
+        <img src="image_02d399.png" alt="WoodAppleHub Logo" class="h-8 md:h-10">
         <div class="hidden md:block space-x-8 font-semibold text-sm text-slate-600">
             <a href="#benefits" class="hover:text-orange-500 transition">Benefits</a>
             <a href="#order" class="bg-orange-500 text-white px-5 py-2 rounded-full btn-shadow hover:bg-orange-600 transition">Order Now</a>
@@ -80,7 +66,7 @@
         <div class="md:w-1/2 flex justify-center animate__animated animate__zoomIn">
             <div class="relative">
                 <div class="absolute -inset-4 bg-orange-500/10 rounded-[3rem] blur-2xl"></div>
-                <img src="Pic.png" alt="Founder with Wood Apple" class="relative w-80 md:w-[400px] rounded-[2.5rem] shadow-2xl floating border-8 border-white">
+                <img src="image_02c4bd.jpg" alt="Our Wood Apple Farm" class="relative w-80 md:w-[400px] rounded-[2.5rem] shadow-2xl floating border-8 border-white">
             </div>
         </div>
     </section>
@@ -170,7 +156,7 @@
     </section>
 
     <footer class="py-12 text-center text-slate-400 text-sm">
-        <p>© 2026 FruitHub • Hand-harvested with ❤️ @ Ragul's Farm</p>
+        <p>© 2026 WoodAppleHub • Hand-harvested with ❤️ @ Ragul's Farm</p>
         <p class="mt-2 text-xs">Serving all of Bangalore </p>
     </footer>
 
@@ -178,17 +164,11 @@
         function updatePrice(){
             let qty = document.getElementById("qty").value;
             let price = Math.round(qty * 40);
-            
             const display = document.getElementById("priceDisplay");
             display.innerText = "₹" + price;
-
-            // Simple animation on price change
             display.classList.add('animate__animated', 'animate__pulse');
             setTimeout(() => display.classList.remove('animate__animated', 'animate__pulse'), 500);
         }
     </script>
-
 </body>
-
 </html>
-
