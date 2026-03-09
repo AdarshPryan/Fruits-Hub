@@ -106,10 +106,8 @@
                 <p class="text-slate-500 text-sm mt-2">Only 10kg left for this week's harvest.</p>
             </div>
             
-            <form action="https://formspree.io/f/xojkjnjv" method="POST" id="orderForm" class="space-y-4">
-                
+            <form action="https://formspree.io/f/xojkjnjv" method="POST" class="space-y-4">
                 <input type="hidden" name="_next" value="https://adarshpryan.github.io/Fruits-Hub/success.html">
-                <input type="hidden" name="_subject" value="New Wood Apple Order!">
                 
                 <input type="text" name="name" placeholder="Full Name" required class="input-style w-full p-4 rounded-2xl">
                 
@@ -163,7 +161,6 @@
     </footer>
 
     <script>
-        // Update Price Function
         function updatePrice(){
             let qty = document.getElementById("qty").value;
             let price = Math.round(qty * 40);
@@ -172,15 +169,6 @@
             display.classList.add('animate__animated', 'animate__pulse');
             setTimeout(() => display.classList.remove('animate__animated', 'animate__pulse'), 500);
         }
-
-        // BACKUP REDIRECT SCRIPT
-        // If Formspree fails to redirect, this will trigger after clicking submit
-        const form = document.getElementById('orderForm');
-        form.addEventListener('submit', function() {
-            setTimeout(() => {
-                window.location.href = "https://adarshpryan.github.io/Fruits-Hub/success.html";
-            }, 1500); // 1.5 second delay to allow form to send
-        });
     </script>
 </body>
 </html>
